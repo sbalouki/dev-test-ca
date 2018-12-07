@@ -115,7 +115,6 @@ export const DATAS = [
                 answer:`function scanChar(str)
 {
     var printLetters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        asciiArt = null,
         i = 0;
 
     while (i < printLetters.length) {
@@ -135,7 +134,38 @@ console.log(scanChar(printChar("g")));`
             },
             {
                 number:"Q20",
-                answer:`?`
+                answer:`function change(cash)
+{
+    var ten, five, two;
+    
+    var cash_ten    = cash, 
+    cash_five       = cash, 
+    cash_two        = cash;
+
+    // Integer division by 10
+    ten = Math.floor(cash / 10);
+    cash = cash-ten*10;
+
+    // Integer division by 5
+    five = Math.floor(cash/5);
+    cash = cash-five*5;
+
+    // Integer division by 2
+    two = Math.floor(cash/2);
+    cash = cash-two*2;
+
+    return {
+        ten : ten,
+        five: five,
+        two: two
+    };
+}
+// POUR TEST //
+var test_value = 18;
+console.log(change(test_value))
+console.log("Billets de 10 : "+change(test_value).ten)
+console.log("Billets de 5 : "+change(test_value).five)
+console.log("Pieces de 2 : "+change(test_value).two)`
             },
             {
                 number:"Q21",
@@ -146,13 +176,8 @@ console.log(scanChar(printChar("g")));`
         hello_array.push("Hello-"+Object.keys(o)[i]);
     return hello_array;
 }
-var o = {
-    john: 12,
-    brian:true,
-    doe:'hi',
-    fred:false
-};
 // POUR TEST //
+var o = { john: 12, brian:true, doe:'hi', fred:false };
 console.log(helloProperties(o));`
             },
             {
@@ -187,7 +212,7 @@ console.log(isOnEvenPosition(t, 9));`
 }
 // POUR TEST //
 console.log(reshape(6, "1 23 456"));
-console.log(reshape(1, "ABC DEFG H"));`
+console.log(reshape(2, "ABC DEFG H"));`
             },
           ]
     },

@@ -115,7 +115,37 @@ export const DATAS = [
         test:[
             {
               number:"Q15",
-              answer:`???`
+              answer:`class Change 
+{
+  public $coin2 = 0;
+  public $bill5 = 0;
+  public $bill10 = 0;
+}
+
+function optimalChange($cash)
+{
+  $c = new Change();
+  $c->coin2    = $cash;
+    $c->bill5   = $cash;
+    $c->bill10    = $cash;
+
+    // Integer division by 10
+    $c->bill10 = intdiv($cash,10);
+    $cash = $cash-$c->bill10*10;
+
+    // Integer division by 5
+    $c->bill5 = intdiv($cash,5);
+    $cash = $cash-$c->bill5*5;
+
+    // Integer division by 2
+    $c->coin2 = intdiv($cash,2);
+    $cash = $cash-$c->coin2*2;
+  return $c;
+}
+$m = optimalChange(11);
+  echo $m->coin2;
+  echo $m->bill5;
+  echo $m->bill10;`
             },
             {
               number:"Q15",
