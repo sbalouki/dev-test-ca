@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<div *ngFor="let question of questions">
+    <div class="lead">
+        <strong>
+            {{question.number}} :
+        </strong>
+        <span [innerHTML]="question.question"></span>
+        <p [innerHTML]="question.answer"></p>
+    </div>
+</div>

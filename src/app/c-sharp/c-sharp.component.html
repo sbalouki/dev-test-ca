@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+
+<div *ngFor="let question of questions">
+    <div class="lead">
+        <strong>
+            {{question.number}} :
+        </strong>
+        <span [innerHTML]="question.question"></span>
+    </div>
+    <div *ngIf="question.answer_type == 'code'"> 
+        <p class="lead"><strong>Réponse</strong> : <code><span [innerHTML]="question.answer"></span> </code></p>
+    </div>
+    <ng-template #text_only>
+        <p class="lead"><strong>Réponse</strong> : <span [innerHTML]="question.answer"></span> </p>
+    </ng-template>
+</div>
