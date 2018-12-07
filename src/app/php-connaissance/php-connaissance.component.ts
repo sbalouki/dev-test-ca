@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LOGO_PHP } from '../link_img'
+import { LOGOS } from '../link_img'
 import { Title }  from '@angular/platform-browser';
 
 @Component({
@@ -9,8 +9,9 @@ import { Title }  from '@angular/platform-browser';
 })
 export class PhpConnaissanceComponent implements OnInit {
 
-  title = "PHP - CONNAISSANCE DU LANGAGE"
-  logo = {alt:"logo php", img:LOGO_PHP}
+  title = "PHP - CONNAISSANCE DU LANGAGE";
+  logo = LOGOS.find(x=>x.type == "php")
+
 
   questions = [
     {

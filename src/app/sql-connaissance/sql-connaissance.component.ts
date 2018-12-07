@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }  from '@angular/platform-browser';
+import { LOGOS } from '../link_img'
 
 @Component({
   selector: 'app-sql-connaissance',
@@ -9,6 +10,8 @@ import { Title }  from '@angular/platform-browser';
 export class SqlConnaissanceComponent implements OnInit {
 
     title = "SQL - CONNAISSANCE DU LANGAGE";
+    logo = LOGOS.find(x=>x.type == "sql")
+
     questions = [
       {
         number:"Q1",

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }  from '@angular/platform-browser';
+import { LOGOS } from '../link_img'
 
 @Component({
   selector: 'app-sql-modelisation',
@@ -9,6 +10,8 @@ import { Title }  from '@angular/platform-browser';
 export class SqlModelisationComponent implements OnInit {
 
     title = "SQL - MODELISATION"
+    logo = LOGOS.find(x=>x.type == "sql")
+
     questions = [
       {
         number:"Q11",

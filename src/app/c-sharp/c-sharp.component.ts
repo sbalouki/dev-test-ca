@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }  from '@angular/platform-browser';
+import { LOGOS } from '../link_img'
 
 @Component({
   selector: 'app-c-sharp',
@@ -9,6 +10,8 @@ import { Title }  from '@angular/platform-browser';
 export class CSharpComponent implements OnInit {
 
     title = "C# - QUESTIONS SUR C#";
+    logo = LOGOS.find(x=>x.type == "c-sharp")
+    
     questions = [
       {
         number:"Q1",

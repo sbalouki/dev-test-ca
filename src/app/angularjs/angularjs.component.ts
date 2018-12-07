@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }  from '@angular/platform-browser';
+import { LOGOS } from '../link_img'
 
 @Component({
   selector: 'app-angularjs',
@@ -9,6 +10,8 @@ import { Title }  from '@angular/platform-browser';
 export class AngularjsComponent implements OnInit {
 
     title = "ANGULARJS - QUESTIONS SUR LE FRAMEWORK"
+    logo = LOGOS.find(x=>x.type == "angularjs")
+
     questions = [
       {
         number:"Q1",

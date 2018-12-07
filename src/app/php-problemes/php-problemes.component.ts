@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }  from '@angular/platform-browser';
+import { LOGOS } from '../link_img'
 
 @Component({
   selector: 'app-php-problemes',
@@ -9,6 +10,7 @@ import { Title }  from '@angular/platform-browser';
 export class PhpProblemesComponent implements OnInit {
 
     title = "PHP - PROBLEMES"
+    logo = LOGOS.find(x=>x.type == "php")
     questions = [
       {
         number:"Q15",

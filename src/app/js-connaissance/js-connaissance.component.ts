@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }  from '@angular/platform-browser';
-import { LOGO_JS } from '../link_img'
+import { LOGOS } from '../link_img'
 
 @Component({
   selector: 'app-js-connaissance',
@@ -10,8 +10,8 @@ import { LOGO_JS } from '../link_img'
 export class JsConnaissanceComponent implements OnInit {
 
     title = "JAVASCRIPT - CONNAISSANCE DU LANGAGE"
-    logo_js = LOGO_JS;
-    
+    logo = LOGOS.find(x=>x.type == "js")
+
     constructor(private titleService: Title ) 
     {
         this.titleService.setTitle( this.title );

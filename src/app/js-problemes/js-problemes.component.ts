@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LOGO_JS } from '../link_img'
+import { LOGOS } from '../link_img'
 import { Title }  from '@angular/platform-browser';
 
 @Component({
@@ -10,7 +10,7 @@ import { Title }  from '@angular/platform-browser';
 export class JsProblemesComponent implements OnInit {
   
   title = "JAVASCRIPT - RESOLUTION DE PROBLEMES";
-  logo_js = LOGO_JS;
+  logo = LOGOS.find(x=>x.type == "js")
 
   questions = [
     {
