@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }  from '@angular/platform-browser';
 import { LOGOS } from '../link_img'
+import { DATAS } from '../test-php-datas';
 
 @Component({
   selector: 'app-php-problemes',
@@ -11,28 +12,12 @@ export class PhpProblemesComponent implements OnInit {
 
     title = "PHP - PROBLEMES"
     logo = LOGOS.find(x=>x.type == "php")
-    questions = [
-      {
-        number:"Q15",
-        answer:`???`
-      },
-      {
-        number:"Q15",
-        answer:`function calc($array, $n1,$n2){
-    $res = 0;
-    for($i = $n1; $i < $n2+1; $i++)
-    {
-        $res+=$array[$i];
-    }
-    return $res;
-}`
-      },
-    ];
+    questions = DATAS.find(x=>x.type == "problemes").test;
+
     constructor(private titleService: Title ) 
     {
         this.titleService.setTitle( this.title );
     }
-  ngOnInit() {
-  }
-
+    ngOnInit() {
+    }
 }
