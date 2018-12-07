@@ -16,6 +16,7 @@ import { SqlModelisationComponent } from './sql-modelisation/sql-modelisation.co
 import { SqlProblemesComponent } from './sql-problemes/sql-problemes.component';
 import { CSharpComponent } from './c-sharp/c-sharp.component';
 import { AngularjsComponent } from './angularjs/angularjs.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'js-connaissance', component: JsConnaissanceComponent },
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     SqlModelisationComponent,
     SqlProblemesComponent,
     CSharpComponent,
-    AngularjsComponent
+    AngularjsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

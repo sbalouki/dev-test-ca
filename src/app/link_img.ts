@@ -1,6 +1,3 @@
-export const LOGO_JS = ""
-export const LOGO_PHP = ""
-
 export const LOGOS = [
     {
         type:"php", 
@@ -10,7 +7,7 @@ export const LOGOS = [
     {
         type:"js", 
         alt:"logo js", 
-        img:"https://www.so-peps.com/wp-content/uploads/2016/03/js-logo.png"
+        img:"https://www.nuimedia.com/wp-content/uploads/2017/01/javascript-logo.png"
     },
     {
         type:"c-sharp", 

@@ -1,6 +1,7 @@
 
 export const DATAS = [
-    { type:'connaissance',
+    { 
+        type:'connaissance',
         test:[
         {
             number:"Q1",
@@ -83,8 +84,8 @@ export const DATAS = [
         question:`Parmi les expressions suivantes, lesquelles sont évaluées à true ?`,
         answer: ` 
         <pre><code>"a"==='a' //true
-    4.0===4  //true
-    "1"==1  //true</code></pre>`,
+4.0===4  //true
+"1"==1  //true</code></pre>`,
             answer_type:"pre_code"
         },
         {
@@ -112,25 +113,25 @@ export const DATAS = [
             {
                 number:"Q19",
                 answer:`function scanChar(str)
-        {
-            var printLetters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                asciiArt = null,
-                i = 0;
-        
-            while (i < printLetters.length) {
-                if(printChar(printLetters[i]) === str)
-                    return printLetters[i];
-                i++;
-            }
-            return "?";
-        }
-        // Fake printChar pour test
-        function printChar(letter)
-        {
-            return letter+"-je_suis_une_representation_graphique";
-        }
-        // POUR TEST //
-        console.log(scanChar(printChar("g")));`
+{
+    var printLetters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        asciiArt = null,
+        i = 0;
+
+    while (i < printLetters.length) {
+        if(printChar(printLetters[i]) === str)
+            return printLetters[i];
+        i++;
+    }
+    return "?";
+}
+// Fake printChar pour test
+function printChar(letter)
+{
+    return letter+"-je_suis_une_representation_graphique";
+}
+// POUR TEST //
+console.log(scanChar(printChar("g")));`
             },
             {
                 number:"Q20",
@@ -139,54 +140,54 @@ export const DATAS = [
             {
                 number:"Q21",
                 answer:`function helloProperties(o)
-        {
-            var hello_array = [];
-            for(var i = 0; i < Object.keys(o).length; i++)
-                hello_array.push("Hello-"+Object.keys(o)[i]);
-            return hello_array;
-        }
-        var o = {
-            john: 12,
-            brian:true,
-            doe:'hi',
-            fred:false
-        };
-        // POUR TEST //
-        console.log(helloProperties(o));`
+{
+    var hello_array = [];
+    for(var i = 0; i < Object.keys(o).length; i++)
+        hello_array.push("Hello-"+Object.keys(o)[i]);
+    return hello_array;
+}
+var o = {
+    john: 12,
+    brian:true,
+    doe:'hi',
+    fred:false
+};
+// POUR TEST //
+console.log(helloProperties(o));`
             },
             {
                 number:"Q22",
                 answer:`function isOnEvenPosition(table, value)
-        {
-            if(table.indexOf(value) % 2 == 0)
-                return true;
-            return false;
-        }
-        // POUR TEST //
-        var t = [9,8,7,6,5,4,3,2,1,0];
-        console.log(isOnEvenPosition(t, 6));
-        console.log(isOnEvenPosition(t, 7));
-        console.log(isOnEvenPosition(t, 9));`
+{
+    if(table.indexOf(value) % 2 == 0)
+        return true;
+    return false;
+}
+// POUR TEST //
+var t = [9,8,7,6,5,4,3,2,1,0];
+console.log(isOnEvenPosition(t, 6));
+console.log(isOnEvenPosition(t, 7));
+console.log(isOnEvenPosition(t, 9));`
             },
             {
                 number:"Q23",
                 answer:`function reshape(n, str)
-        {
-            var res = [];
-            // Deletion of spaces in str
-            shaped_str = str.replace(/\s/g, "");
-            for(var i = 0; i < shaped_str.length; i++)
-            {
-                if(i % n == 0 && i > 0)
-                    res.push("\n");
-                res.push(shaped_str[i]);
-            }
-            // Conversion of res[] content to string
-            return res.join("");
-        }
-        // POUR TEST //
-        console.log(reshape(6, "1 23 456"));
-        console.log(reshape(1, "ABC DEFG H"));`
+{
+    var res = [];
+    // Deletion of spaces in str
+    shaped_str = str.replace(/\s/g, "");
+    for(var i = 0; i < shaped_str.length; i++)
+    {
+        if(i % n == 0 && i > 0)
+            res.push("\n");
+        res.push(shaped_str[i]);
+    }
+    // Conversion of res[] content to string
+    return res.join("");
+}
+// POUR TEST //
+console.log(reshape(6, "1 23 456"));
+console.log(reshape(1, "ABC DEFG H"));`
             },
           ]
     },
@@ -197,15 +198,14 @@ export const DATAS = [
               number:"Q24",
               question: ``,
               answer:`<pre><code>function calc(array, n1, n2)
-        {
-            var sub_array = array.slice(n1, n2+1);
-            const add = (a,b) => a + b;
-            return sub_array.reduce(add);
-        }
-        // POUR TEST //
-        var array = [0,1,2,3,4,5,3];
-        console.log(calc(array, 0, 1));
-              </code></pre>`,
+{
+    var sub_array = array.slice(n1, n2+1);
+    const add = (a,b) => a + b;
+    return sub_array.reduce(add);
+}
+// POUR TEST //
+var array = [0,1,2,3,4,5,3];
+console.log(calc(array, 0, 1));</code></pre>`,
               answer_type:"pre_code"
             },
             {

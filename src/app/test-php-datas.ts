@@ -120,13 +120,13 @@ export const DATAS = [
             {
               number:"Q15",
               answer:`function calc($array, $n1,$n2){
-          $res = 0;
-          for($i = $n1; $i < $n2+1; $i++)
-          {
-              $res+=$array[$i];
-          }
-          return $res;
-      }`
+    $res = 0;
+    for($i = $n1; $i < $n2+1; $i++)
+    {
+        $res+=$array[$i];
+    }
+    return $res;
+}`
             },
           ]
     }
