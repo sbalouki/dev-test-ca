@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-angularjs',
@@ -159,8 +160,10 @@ export class AngularjsComponent implements OnInit {
         answer_type:"text"
       },
     ]
-  constructor() { }
-
+    constructor(private titleService: Title ) 
+    {
+        this.titleService.setTitle( this.title );
+    }
   ngOnInit() {
   }
 

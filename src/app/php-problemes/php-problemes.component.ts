@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-php-problemes',
@@ -25,8 +26,10 @@ export class PhpProblemesComponent implements OnInit {
 }`
       },
     ];
-  constructor() { }
-
+    constructor(private titleService: Title ) 
+    {
+        this.titleService.setTitle( this.title );
+    }
   ngOnInit() {
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sql-modelisation',
@@ -20,8 +21,10 @@ export class SqlModelisationComponent implements OnInit {
         answer:`Clé étrangère.`
       },
     ]
-  constructor() { }
-
+    constructor(private titleService: Title ) 
+    {
+        this.titleService.setTitle( this.title );
+    }
   ngOnInit() {
   }
 

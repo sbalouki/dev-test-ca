@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }  from '@angular/platform-browser';
 import { LOGO_JS } from '../link_img'
 
 @Component({
@@ -8,8 +9,13 @@ import { LOGO_JS } from '../link_img'
 })
 export class JsConnaissanceComponent implements OnInit {
 
-  title = "JAVASCRIPT - CONNAISSANCE DU LANGAGE"
-  logo_js = LOGO_JS;
+    title = "JAVASCRIPT - CONNAISSANCE DU LANGAGE"
+    logo_js = LOGO_JS;
+    
+    constructor(private titleService: Title ) 
+    {
+        this.titleService.setTitle( this.title );
+    }
 
   questions = [
     {
@@ -117,7 +123,6 @@ export class JsConnaissanceComponent implements OnInit {
     }
   ]
 
-  constructor() { }
 
   ngOnInit() {
   }

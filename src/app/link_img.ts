@@ -1,2 +1,2 @@
-export const LOGO_JS = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/PHP_Logo%2C_text_only.svg/640px-PHP_Logo%2C_text_only.svg.png"
+export const LOGO_JS = "https://www.so-peps.com/wp-content/uploads/2016/03/js-logo.png"
 export const LOGO_PHP = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/PHP_Logo%2C_text_only.svg/640px-PHP_Logo%2C_text_only.svg.png"

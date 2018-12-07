@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sql-connaissance',
@@ -60,8 +61,10 @@ export class SqlConnaissanceComponent implements OnInit {
         answer:`SELECT * FROM product join product_category on product.product_category_id = product_category.product_category_id`
       },
     ];
-  constructor() { }
-
+    constructor(private titleService: Title ) 
+    {
+        this.titleService.setTitle( this.title );
+    }
   ngOnInit() {
   }
 

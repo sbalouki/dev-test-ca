@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-php-modelisation',
@@ -26,8 +27,10 @@ export class PhpModelisationComponent implements OnInit {
       answer:`Proposition #1`
     },
   ];
-  constructor() { }
-
+  constructor(private titleService: Title ) 
+  {
+      this.titleService.setTitle( this.title );
+  }
   ngOnInit() {
   }
 

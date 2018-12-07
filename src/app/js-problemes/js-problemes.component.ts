@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LOGO_JS } from '../link_img'
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-js-problemes',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class JsProblemesComponent implements OnInit {
   
   title = "JAVASCRIPT - RESOLUTION DE PROBLEMES";
+  logo_js = LOGO_JS;
+
   questions = [
     {
       number:"Q24",
@@ -60,8 +64,10 @@ console.log(calc(array, 0, 1));
       answer_type:"code"
     },
   ]
-  constructor() { }
-
+  constructor(private titleService: Title ) 
+  {
+      this.titleService.setTitle( this.title );
+  }
   ngOnInit() {
   }
 

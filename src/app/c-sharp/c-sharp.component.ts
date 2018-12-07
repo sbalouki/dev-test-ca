@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-c-sharp',
@@ -86,7 +87,10 @@ export class CSharpComponent implements OnInit {
         answer_type:"code"
       },
     ];
-  constructor() { }
+    constructor(private titleService: Title ) 
+    {
+        this.titleService.setTitle( this.title );
+    }
 
   ngOnInit() {
   }

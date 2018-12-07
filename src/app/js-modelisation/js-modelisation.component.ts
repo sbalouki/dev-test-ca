@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LOGO_JS } from '../link_img'
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-js-modelisation',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class JsModelisationComponent implements OnInit {
   
   title = "JAVASCRIPT - MODELISATION";
+  logo_js = LOGO_JS;
 
   questions = [
     {
@@ -90,8 +93,10 @@ console.log(reshape(6, "1 23 456"));
 console.log(reshape(1, "ABC DEFG H"));`
     },
   ];
-  constructor() { }
-
+  constructor(private titleService: Title ) 
+  {
+      this.titleService.setTitle( this.title );
+  }
   ngOnInit() {
   }
 

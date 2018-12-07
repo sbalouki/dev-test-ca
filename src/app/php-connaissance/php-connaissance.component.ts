@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LOGO_PHP } from '../link_img'
+import { Title }  from '@angular/platform-browser';
 
 @Component({
   selector: 'app-php-connaissance',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class PhpConnaissanceComponent implements OnInit {
 
   title = "PHP - CONNAISSANCE DU LANGAGE"
+  logo = {alt:"logo php", img:LOGO_PHP}
+
   questions = [
     {
       number:"Q1",
@@ -95,8 +99,10 @@ export class PhpConnaissanceComponent implements OnInit {
       answer_type:"code"
     },
   ]
-  constructor() { }
-
+  constructor(private titleService: Title ) 
+  {
+      this.titleService.setTitle( this.title );
+  }
   ngOnInit() {
   }
 
