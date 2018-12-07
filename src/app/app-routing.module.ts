@@ -16,18 +16,17 @@ import { AngularjsComponent } from './angularjs/angularjs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/js-connaissance', component: JsConnaissanceComponent },
-  { path: '/js-modelisation', component: JsModelisationComponent },
-  { path: '/js-problemes', component: JsProblemesComponent },
-  { path: '/php-connaissance', component: PhpConnaissanceComponent },
-  { path: '/php-modelisation', component: PhpModelisationComponent },
-  { path: '/php-problemes', component: PhpProblemesComponent },
-  { path: '/sql-connaissance', component: SqlConnaissanceComponent },
-  { path: '/sql-modelisation', component: SqlModelisationComponent },
-  { path: '/sql-problemes', component: SqlProblemesComponent },
-  { path: '/c-sharp', component: CSharpComponent },
-  { path: '/angularjs', component: AngularjsComponent },
-  // { path: '', component: AngularjsComponent},
+  { path: 'js-connaissance', component: JsConnaissanceComponent },
+  { path: 'js-modelisation', component: JsModelisationComponent },
+  { path: 'js-problemes', component: JsProblemesComponent },
+  { path: 'php-connaissance', component: PhpConnaissanceComponent },
+  { path: 'php-modelisation', component: PhpModelisationComponent },
+  { path: 'php-problemes', component: PhpProblemesComponent },
+  { path: 'sql-connaissance', component: SqlConnaissanceComponent },
+  { path: 'sql-modelisation', component: SqlModelisationComponent },
+  { path: 'sql-problemes', component: SqlProblemesComponent },
+  { path: 'c-sharp', component: CSharpComponent },
+  { path: 'angularjs', component: AngularjsComponent },
 ];
 
 @NgModule({
