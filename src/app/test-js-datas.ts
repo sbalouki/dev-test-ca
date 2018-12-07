@@ -134,38 +134,73 @@ console.log(scanChar(printChar("g")));`
             },
             {
                 number:"Q20",
-                answer:`function change(cash)
-{
-    var ten, five, two;
-    
-    var cash_ten    = cash, 
-    cash_five       = cash, 
-    cash_two        = cash;
+                answer:`function get_best_child(amount) {
+                    var queue = [];
+                    var rootNode = {
+                        value: amount,
+                        childs: {}
+                    }
 
-    // Integer division by 10
-    ten = Math.floor(cash / 10);
-    cash = cash-ten*10;
+                    queue.unshift(rootNode);
+                    while (queue.length > 0) {
+                        var node = queue.pop();
+                        availablePieces.forEach((piece) => {
+                            var child = {
+                                value: node.value - piece,
+                                childs: {}
+                            }
+                            if (child.value >= 0) {
+                                node.childs[piece] = child;
+                                node.childs[piece].parent = node;
+                                node.childs[piece].coinValue = piece;
+                            }
+                        });
 
-    // Integer division by 5
-    five = Math.floor(cash/5);
-    cash = cash-five*5;
+                        for (const coin in node.childs) {
+                            const child = node.childs[coin];
+                            if (child.value == 0) {
+                                return child;
+                            }
+                            queue.unshift(child);
+                        }
+                    }
+                    return null;
+                }
 
-    // Integer division by 2
-    two = Math.floor(cash/2);
-    cash = cash-two*2;
+                function get_change(node) {
+                    if (node && node.parent) {
+                        switch (node.coinValue) {
+                            case 2:
+                                two += 1;
+                                break;
+                            case 5:
+                                five += 1;
+                                break;
+                            default:
+                                ten += 1;
+                                break;
+                        }
+                        get_change(node.parent);
+                    }
+                    return {
+                        two, two,
+                        five: five,
+                        ten: ten
+                    };
+                }
 
-    return {
-        ten : ten,
-        five: five,
-        two: two
-    };
-}
-// POUR TEST //
-var test_value = 18;
-console.log(change(test_value))
-console.log("Billets de 10 : "+change(test_value).ten)
-console.log("Billets de 5 : "+change(test_value).five)
-console.log("Pieces de 2 : "+change(test_value).two)`
+                var two = 0;
+                var five = 0;
+                var ten = 0;
+
+                var availablePieces = [10, 5, 2];
+
+                var bestChild = get_best_child(50);
+                var money_change = get_change(bestChild);
+
+                console.log(money_change.five)
+                console.log(money_change.two)
+                console.log(money_change.ten);`
             },
             {
                 number:"Q21",
